@@ -1,0 +1,15 @@
+<h3>Cart</h3>
+
+<div class="cart-item" *ngFor="let item of items">
+  <span><a>id : </a>{{ item.id }}</span> &nbsp;
+  <span><a>name : </a>{{ item.name }}</span> &nbsp;
+  <span><a>Price : </a>{{ item.price | currency }}</span> &nbsp;
+  <span><a>quanity : </a>{{ item.quanity}}</span> &nbsp;
+  
+  <button (click)="clear(item.id)">
+    <mat-icon>delete</mat-icon>
+  </button>
+  <hr>
+</div>
+<button mat-button (click)="clearCart()">ClearCart</button> 
+<br>

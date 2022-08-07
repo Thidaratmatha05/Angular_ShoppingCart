@@ -1,0 +1,13 @@
+<h2>Product Details</h2>
+<hr>
+<div *ngIf="product">
+  <img src="https://icon-library.com/images/iphone-icon-png/iphone-icon-png-13.jpg" alt="ข้อความอธิบายภาพ" width="200" height="200">
+  <h3><a>Id : </a>{{ product.id }}</h3>
+  <h3><a>Name : </a>{{ product.name }}</h3>
+  <h4><a>Price : </a>{{ product.price | currency }}</h4>
+  <p><a>Description : </a>{{ product.description }}</p>
+
+  <button mat-button (click)="addToCart(product)">Buy</button>
+  <p></p>
+  <button mat-button (click)="goBack()">Back</button> 
+</div>
