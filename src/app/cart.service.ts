@@ -7,11 +7,8 @@ import { Product } from './products';
 export class CartService {
   items: Product[] = [];
   totalprice = 0;
-  
-
 
   constructor() { }
-
 
   addToCart(product: Product) {
    this.items.push(product);
