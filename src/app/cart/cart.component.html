@@ -1,5 +1,4 @@
 <h3>Cart</h3>
-
 <div class="cart-item" *ngFor="let item of items">
   <span><a>name : </a>{{ item.name }}</span> &nbsp;
   <span><a>quanity : </a>{{ item.quanity }}</span> &nbsp;
@@ -11,5 +10,7 @@
   
   <hr>
 </div>
+<p><a>Total : </a>{{ total | currency: "THB " }}</p>
+<br>
 <button mat-button (click)="clearCart()">ClearCart</button> 
 <br>

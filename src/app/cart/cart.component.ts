@@ -10,9 +10,11 @@ import { Location } from '@angular/common';
 })
 export class CartComponent implements OnInit {
   items = this.cartService.getItems();
+  total = this.cartService.getTotalPrice();
+ 
+ 
 
   constructor(
-    private location: Location,
     private cartService: CartService
   ) { }
 

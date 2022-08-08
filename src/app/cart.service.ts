@@ -6,10 +6,13 @@ import { Product } from './products';
 })
 export class CartService {
   items: Product[] = [];
+  totalprice = 0;
+
   constructor() { }
 
   addToCart(product: Product) {
    this.items.push(product);
+   this.totalprice += product.price;
    
   }
 
@@ -20,5 +23,9 @@ export class CartService {
   clearCart() {
     this.items = [];
     return this.items;
+  }
+
+  getTotalPrice() {
+    return this.totalprice;
   }
 }
